@@ -12,7 +12,7 @@ const seaBoard = [
 */
 function allocateShips(shipPosicions, initialBoard) {
   for (let i = 0 ; i < shipPosicions.length; i++) {
-    let position = shipPosicions[i];
+    const position = shipPosicions[i];
     initialBoard[position[0]][position[1]] = "S"
   }
 return initialBoard;
@@ -20,7 +20,7 @@ return initialBoard;
 
 function checkGuesses(guesses, mountedSeaBoard){
  for (let i = 0; i < guesses.length; i++){
-  let assumptions = guesses[i];
+  const assumptions = guesses[i];
   if(mountedSeaBoard[assumptions[0]][assumptions[1]] === "S"){
 mountedSeaBoard[assumptions[0]][assumptions[1]] = "X";
   }
